@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WispManager.UI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "WispManager.UI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
