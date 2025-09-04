@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Window
     x:Class="WispManager.UI.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -7,13 +6,23 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Title="WispManager.UI">
+    Title="Wisp Manager.UI">
 
-    <Window.SystemBackdrop>
-        <MicaBackdrop />
-    </Window.SystemBackdrop>
+    <NavigationView 
+        x:Name="NavView"
+        PaneDisplayMode="Left"
+        IsSettingsVisible="True"
+        IsBackButtonVisible="Auto"
+        IsPaneOpen="False"
+        >
+        <NavigationView.MenuItems>
+            <NavigationViewItem Content="Inicio" Icon="Home" Tag="home"/>
+            <NavigationViewItem Content="Clientes" Icon="Contact" Tag="clients"/>
+            <NavigationViewItem Content="Planes" Icon="Play" Tag="plans"/>
+            <NavigationViewItem Content="Inventario" Icon="Library" Tag="inventory"/>
+            <NavigationViewItem Content="Routers" Icon="Admin" Tag="routers"/>
+        </NavigationView.MenuItems>
 
-    <Grid>
-
-    </Grid>
+        <Frame x:Name="ContentFrame"/>
+    </NavigationView>
 </Window>
